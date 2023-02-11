@@ -3,14 +3,30 @@
 Convert a selected text area with JSON or Javascript Object/Array to/from PHP Array notation.
 If the selected text is empty it will take the content of the clipboard an inserts at the current cursor position.
 
+[![Version](https://img.shields.io/visual-studio-marketplace/v/heissenbergerlab.php-array-from-json?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=heissenbergerlab.php-array-from-json) ![Installs](https://img.shields.io/visual-studio-marketplace/i/heissenbergerlab.php-array-from-json?style=for-the-badge) ![Downloads](https://img.shields.io/visual-studio-marketplace/d/heissenbergerlab.php-array-from-json?style=for-the-badge) ![Rating](https://img.shields.io/visual-studio-marketplace/r/heissenbergerlab.php-array-from-json?style=for-the-badge)
+
 ## Features
+
+- User selected text or clipboard content
+- Convert from JSON to PHP Array
+- Convert from Javascript Objects, Array to PHP Array
+- Convert from PHP Array to JSON
+- Convert the result of function written in PHP or Javascript to JSON / PHP Array
+
+## Preview
+
+![preview](docs/preview.gif)
+
+## Release Notes
+
+see [Changelog](CHANGELOG.md)
 
 ### Command `JSON to PHP Array`
 
 **from JSON:**
 
 ```json
-{ "key": [1, "string", true] }
+{ "key": [1, "string", true, null] }
 ```
 
 **to PHP Array:**
@@ -100,23 +116,3 @@ Calling out known issues can help limit users opening duplicate issues against y
 This is a list of features which are not planed to implement:
 
 - Formating the converted result - not needed as there are allready builtin tools which can do this and in most cases the minified version is needed.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 0.0.1
-
-Initial release
-
-### 0.0.2
-
-Add Command `JSON from PHP Array`
-
-### 0.0.3
-
-Logo for VS Code Extention
-
-### 0.0.4
-
-Insert from Clipboard if text selection is empty
