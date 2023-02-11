@@ -15,10 +15,13 @@ If the selected text is empty it will take the content of the clipboard an inser
 
 ## Release Notes
 
-see [Changelog](CHANGELOG.md)
+see [Changelog](https://github.com/aheissenberger/php-array-from-json-vscode/raw/main/CHANGELOG.md)
 
 ## Preview
 
+<p align="center">
+  <img src="https://github.com/aheissenberger/php-array-from-json-vscode/raw/main/docs/preview.gif" alt="preview">
+</p>
 ![preview](docs/preview.gif)
 
 ### Command `JSON to PHP Array`
@@ -116,3 +119,7 @@ Calling out known issues can help limit users opening duplicate issues against y
 This is a list of features which are not planed to implement:
 
 - Formating the converted result - not needed as there are allready builtin tools which can do this and in most cases the minified version is needed.
+
+## Licence
+
+[BSD 2 Clause](https://github.com/aheissenberger/php-array-from-json-vscode/raw/main/LICENSE.txt)

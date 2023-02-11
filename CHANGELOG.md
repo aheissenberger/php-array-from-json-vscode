@@ -35,3 +35,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Fixed
 
 - Javascript `null` conversion was broken
+
+## [0.0.6] - 2023-02-20
+
+### Fixed
+
+- broken links to changelog and preview image
