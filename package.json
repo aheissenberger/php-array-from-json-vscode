@@ -2,7 +2,7 @@
   "name": "php-array-from-json",
   "displayName": "PHP Array from/to JSON or JavaScript",
   "description": "Create PHP Array from/to JSON or JavaScript object notation Code.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "heissenbergerlab",
   "license": "bsd-2-clause",
   "homepage": "https://github.com/aheissenberger/vscode-php-array-from-json-js",
@@ -53,7 +53,7 @@
     "pretest": "yarn run lint",
     "test": "node ./test/runTest.js",
     "vsce:package": "npx vsce package --no-yarn",
-    "vsce:publish": "npx vsce publish"
+    "vsce:publish": "npx vsce publish --no-yarn"
   },
   "devDependencies": {
     "@types/glob": "^8.0.1",
