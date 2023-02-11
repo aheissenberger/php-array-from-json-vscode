@@ -1,7 +1,7 @@
 {
   "name": "php-array-from-json",
-  "displayName": "PHP Array from JSON or JavaScript",
-  "description": "Create PHP Array from JSON or JavaScript object notation Code.",
+  "displayName": "PHP Array from/to JSON or JavaScript",
+  "description": "Create PHP Array from/to JSON or JavaScript object notation Code.",
   "version": "0.0.1",
   "publisher": "heissenbergerlab",
   "license": "bsd-2-clause",
@@ -31,15 +31,29 @@
       {
         "command": "php-array-from-json.fromJS",
         "title": "JS Object/Array to PHP Array"
+      },
+      {
+        "command": "php-array-from-json.toJSON",
+        "title": "JSON from PHP Array"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "PHP Array from/to JSON",
+      "properties": {
+        "php-array-from-json.phpexec": {
+          "type": "string",
+          "default": "php",
+          "markdownDescription": "Specifies the exact location of  `php` e.g. `/opt/bin/php` or use only the name `php` when available in `PATH`"
+        }
+      }
+    }
   },
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn run lint",
     "test": "node ./test/runTest.js",
-    "vsce:package":"npx vsce package --no-yarn",
-    "vsce:publish":"npx vsce publish"
+    "vsce:package": "npx vsce package --no-yarn",
+    "vsce:publish": "npx vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^8.0.1",
@@ -53,6 +67,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "php-array-from-json-js": "^0.0.7"
+    "php-array-from-json-js": "^0.0.7",
+    "php-array-to-json-js": "^0.0.2"
   }
 }

@@ -1,15 +1,16 @@
 # PHP Array from JSON or JavaScript
 
-Convert a selected JSON or Javascript Object/Array to PHP Array notation.
+Convert a selected text area with JSON or Javascript Object/Array to/from PHP Array notation.
 
 ## Features
 
 ### Command `JSON to PHP Array`
 
+**from JSON:**
 ```json
 {"key":[1,"string",true]}
 ```
-
+**to PHP Array:**
 ```php
 ["key"=>[1,"string",true]]
 ```
@@ -18,30 +19,60 @@ Convert a selected JSON or Javascript Object/Array to PHP Array notation.
 
 supports Javascript Sparse Arrays
 
+**from Javascript Object/Array:**
 ```js
 {key:[1,"string",NULL,,true]}
 ```
-
+**to PHP Code:**
 ```php
 ["key"=>[1,"string",NULL,NULL,true]]
 ```
 
-<!---
+Function calls are interpreted, which allows generate output with any javascript function which is part of the text selection:
+
+**from Javascript Code:**
+```js
+[...Array(10).keys()]
+```
+**to PHP Array:**
+```php
+[0,1,2,3,4,5,6,7,8,9]
+```
+
+### Command `JSON from PHP Array`
+
+**from PHP Array:**
+```php
+["key"=>[1,"string",NULL,true]]
+```
+**to JSON:**
+```json
+{key:[1,"string",NULL,true]}
+```
+
+Function calls are interpreted, which allows generate output with any php function which is part of the text selection:
+
+**from PHP Code return value:**
+```php
+range(0,9)
+```
+**to JSON:**
+```json
+[0,1,2,3,4,5,6,7,8,9]
+```
+
 ## Requirements
 
-none
+Command `JSON from PHP Array` a local `php` binary is required.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `php-array-from-json.phpexec`: Set to path of your `php` binary if the extention cannot find it based on the systems `PATH` settings. Error: `Invalid PHP Array Code: Error: spawn php ENOENT`
 
+
+<!--
 ## Known Issues
 
 Calling out known issues can help limit users opening duplicate issues against your extension.
@@ -55,3 +86,6 @@ Users appreciate release notes as you update your extension.
 
 Initial release
 
+### 0.0.2
+
+Add Command `JSON from PHP Array`
