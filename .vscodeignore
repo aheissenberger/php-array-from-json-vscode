@@ -10,3 +10,4 @@ vsc-extension-quickstart.md
 **/*.map
 **/.eslintrc.json
 assets/**
+docs/preview.gif
