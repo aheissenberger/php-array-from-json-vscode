@@ -89,3 +89,7 @@ Initial release
 ### 0.0.2
 
 Add Command `JSON from PHP Array`
+
+### 0.0.3
+
+Logo for VS Code Extention

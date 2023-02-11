@@ -17,3 +17,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - add Command to convert PHP Array to JSON
+
+## [0.0.3] - 2023-02-20
+
+### Added
+
+- Logo for VS Code Extention
