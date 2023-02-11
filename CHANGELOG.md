@@ -23,3 +23,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - Logo for VS Code Extention
+
+## [0.0.4] - 2023-02-20
+
+### Added
+
+- Insert from Clipboard if text selection is empty

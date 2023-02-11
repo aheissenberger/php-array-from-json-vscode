@@ -1,9 +1,9 @@
 {
   "name": "php-array-from-json",
   "displayName": "PHP Array from/to JSON or JavaScript",
-  "description": "Create PHP Array from/to JSON or JavaScript object notation Code.",
+  "description": "Convert PHP Array from/to JSON or JavaScript from text selection or clipboard.",
   "icon": "icon.png",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "heissenbergerlab",
   "license": "bsd-2-clause",
   "homepage": "https://github.com/aheissenberger/vscode-php-array-from-json-js",

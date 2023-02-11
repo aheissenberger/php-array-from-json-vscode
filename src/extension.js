@@ -1,8 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-const {json2phpArray,js2phpArray} = require('php-array-from-json-js')
-const {phparray2json} = require('php-array-to-json-js')
+const { json2phpArray, js2phpArray } = require('php-array-from-json-js')
+const { phparray2json } = require('php-array-to-json-js')
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -20,11 +20,14 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable;
-	disposable = vscode.commands.registerCommand('php-array-from-json.fromJSON', function () {
+	disposable = vscode.commands.registerCommand('php-array-from-json.fromJSON', async function () {
 		const editor = vscode.window.activeTextEditor;
-		const selectedText = editor.document.getText(editor.selection);
-		try{
-			const phpCode=json2phpArray(selectedText);
+		let selectedText = editor.document.getText(editor.selection);
+		if (selectedText.trim().length === 0) {
+			selectedText = await vscode.env.clipboard.readText();
+		}
+		try {
+			const phpCode = json2phpArray(selectedText);
 			editor.edit(editBuilder => {
 				editBuilder.replace(
 					new vscode.Range(
@@ -36,17 +39,20 @@ function activate(context) {
 					phpCode
 				);
 			});
-		} catch(exception) {
+		} catch (exception) {
 			console.log(exception); // see Dev Logs: https://stackoverflow.com/questions/34085330/how-to-write-to-log-from-vscode-extension
-			vscode.window.showErrorMessage('Invalid JSON: '+exception.message);
+			vscode.window.showErrorMessage('Invalid JSON: ' + exception.message);
 		}
 	});
 
-	disposable = vscode.commands.registerCommand('php-array-from-json.fromJS', function () {
+	disposable = vscode.commands.registerCommand('php-array-from-json.fromJS', async function () {
 		const editor = vscode.window.activeTextEditor;
-		const selectedText = editor.document.getText(editor.selection);
-		try{
-			const phpCode=js2phpArray(selectedText);
+		let selectedText = editor.document.getText(editor.selection);
+		if (selectedText.trim().length === 0) {
+			selectedText = await vscode.env.clipboard.readText();
+		}
+		try {
+			const phpCode = js2phpArray(selectedText);
 			editor.edit(editBuilder => {
 				editBuilder.replace(
 					new vscode.Range(
@@ -58,9 +64,9 @@ function activate(context) {
 					phpCode
 				);
 			});
-		} catch(exception) {
+		} catch (exception) {
 			console.log(exception); // see Dev Logs: https://stackoverflow.com/questions/34085330/how-to-write-to-log-from-vscode-extension
-			vscode.window.showErrorMessage('Invalid Javascript Object Notation: '+exception.message);
+			vscode.window.showErrorMessage('Invalid Javascript Object Notation: ' + exception.message);
 		}
 
 		// Display a message box to the user
@@ -71,9 +77,12 @@ function activate(context) {
 		const config = vscode.workspace.getConfiguration('php-array-from-json')
 		console.log(config)
 		const editor = vscode.window.activeTextEditor;
-		const selectedText = editor.document.getText(editor.selection);
-		try{
-			const json=await phparray2json(selectedText,config.phpexec);
+		let selectedText = editor.document.getText(editor.selection);
+		if (selectedText.trim().length === 0) {
+			selectedText = await vscode.env.clipboard.readText();
+		}
+		try {
+			const json = await phparray2json(selectedText, config.phpexec);
 			editor.edit(editBuilder => {
 				editBuilder.replace(
 					new vscode.Range(
@@ -85,9 +94,9 @@ function activate(context) {
 					json
 				);
 			});
-		} catch(exception) {
+		} catch (exception) {
 			console.log(exception); // see Dev Logs: https://stackoverflow.com/questions/34085330/how-to-write-to-log-from-vscode-extension
-			vscode.window.showErrorMessage('Invalid PHP Array Code: '+exception.message);
+			vscode.window.showErrorMessage('Invalid PHP Array Code: ' + exception.message);
 		}
 
 		// Display a message box to the user
@@ -99,7 +108,7 @@ function activate(context) {
 }
 
 // This method is called when your extension is deactivated
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
 	activate,
