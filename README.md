@@ -13,13 +13,13 @@ If the selected text is empty it will take the content of the clipboard an inser
 - Convert from PHP Array to JSON
 - Convert the result of function written in PHP or Javascript to JSON / PHP Array
 
-## Preview
-
-![preview](docs/preview.gif)
-
 ## Release Notes
 
 see [Changelog](CHANGELOG.md)
+
+## Preview
+
+![preview](docs/preview.gif)
 
 ### Command `JSON to PHP Array`
 
@@ -41,16 +41,16 @@ supports Javascript Sparse Arrays
 
 **from Javascript Object/Array:**
 
-```js
-{
-  key: [1, "string", NULL, , true];
-}
+```javascript
+variable = {
+  key: [1, "string", null, , true],
+};
 ```
 
 **to PHP Code:**
 
 ```php
-["key"=>[1,"string",NULL,NULL,true]]
+["key"=>[1,"string",null,null,true]]
 ```
 
 Function calls are interpreted, which allows generate output with any javascript function which is part of the text selection:
@@ -72,13 +72,13 @@ Function calls are interpreted, which allows generate output with any javascript
 **from PHP Array:**
 
 ```php
-["key"=>[1,"string",NULL,true]]
+["key"=>[1,"string",null,true]]
 ```
 
 **to JSON:**
 
 ```json
-{key:[1,"string",NULL,true]}
+{ "key": [1, "string", null, true] }
 ```
 
 Function calls are interpreted, which allows generate output with any php function which is part of the text selection:

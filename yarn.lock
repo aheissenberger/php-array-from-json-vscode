@@ -921,10 +921,10 @@ path-key@^3.1.0:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-3.1.1.tgz#581f6ade658cbba65a0d3380de7753295054f375"
   integrity sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==
 
-php-array-from-json-js@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/php-array-from-json-js/-/php-array-from-json-js-0.0.7.tgz#d8ee9016f4c2cec6d76bb27f11616928cd7e2cab"
-  integrity sha512-JgXiEbmjxJCzG1QxRgyBZZysOvwfzrPWg4dY8rWb+XG9guR41S7bVxWFv34JbvJiJm+yad+zQmWhQANaPxj4Qw==
+php-array-from-json-js@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/php-array-from-json-js/-/php-array-from-json-js-0.0.9.tgz#c528f72cee08c094d3b46fd83c9e1b1f0818f54a"
+  integrity sha512-ZaXBhJqudvUqHnKH03U+/7kqS+TEDgMChzvWl0ZXOlW5OCStfWQ2fXCl72f3WOZtlI0zLkwTP9LuciDhp8JeKw==
 
 php-array-to-json-js@^0.0.2:
   version "0.0.2"

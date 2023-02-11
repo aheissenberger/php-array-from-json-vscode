@@ -3,7 +3,7 @@
   "displayName": "PHP Array from/to JSON or JavaScript",
   "description": "Convert PHP Array from/to JSON or JavaScript from text selection or clipboard.",
   "icon": "icon.png",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "heissenbergerlab",
   "license": "bsd-2-clause",
   "homepage": "https://github.com/aheissenberger/vscode-php-array-from-json-js",
@@ -68,7 +68,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "php-array-from-json-js": "^0.0.7",
+    "php-array-from-json-js": "^0.0.9",
     "php-array-to-json-js": "^0.0.2"
   }
 }

@@ -29,3 +29,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - Insert from Clipboard if text selection is empty
+
+## [0.0.5] - 2023-02-20
+
+### Fixed
+
+- Javascript `null` conversion was broken
